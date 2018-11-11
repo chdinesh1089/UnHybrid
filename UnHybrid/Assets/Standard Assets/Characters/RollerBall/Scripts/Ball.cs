@@ -5,7 +5,7 @@ namespace UnityStandardAssets.Vehicles.Ball
 {
     public class Ball : MonoBehaviour
     {
-        [SerializeField] private float m_MovePower = 5; // The force added to the ball to move it.
+        [SerializeField] public float m_MovePower = 3; // The force added to the ball to move it.
         [SerializeField] private bool m_UseTorque = true; // Whether or not to use torque to move the ball.
         [SerializeField] private float m_MaxAngularVelocity = 25; // The maximum velocity the ball can rotate at.
         [SerializeField] private float m_JumpPower = 2; // The force added to the ball when it jumps.
@@ -13,7 +13,7 @@ namespace UnityStandardAssets.Vehicles.Ball
         private const float k_GroundRayLength = 1f; // The length of the ray to check if the ball is grounded.
         private Rigidbody m_Rigidbody;
         public Vector3 x;
-        public int counter =0;
+ public int counter =0;
 
         private void Start()
         {
@@ -25,11 +25,13 @@ namespace UnityStandardAssets.Vehicles.Ball
 
        void Update()
        {
-           counter++;
-           if (counter%2 ==0){
-             
-             m_Rigidbody.AddForce(x*m_MovePower);
+       counter++;
+       if (counter%100 == 0){
+           float j = .1f;
+           m_MovePower = m_MovePower+j;
        }
+             m_Rigidbody.AddForce(x*m_MovePower);
+
        }
         public void Move(Vector3 moveDirection, bool jump)
         {
@@ -42,7 +44,7 @@ namespace UnityStandardAssets.Vehicles.Ball
             else
             {
                 // Otherwise add force in the move direction.
-                m_Rigidbody.AddForce(moveDirection*2);
+                m_Rigidbody.AddForce(moveDirection*m_MovePower);
             }
 
             // If on the ground and jump is pressed...

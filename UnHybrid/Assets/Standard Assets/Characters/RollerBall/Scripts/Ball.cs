@@ -26,8 +26,8 @@ namespace UnityStandardAssets.Vehicles.Ball
        void Update()
        {
        counter++;
-       if (counter%100 == 0){
-           float j = .1f;
+       if (counter%50 == 0){
+           float j = .2f;
            m_MovePower = m_MovePower+j;
        }
              m_Rigidbody.AddForce(x*m_MovePower);
@@ -44,7 +44,7 @@ namespace UnityStandardAssets.Vehicles.Ball
             else
             {
                 // Otherwise add force in the move direction.
-                m_Rigidbody.AddForce(moveDirection*m_MovePower);
+                m_Rigidbody.AddForce(moveDirection*(m_MovePower-1));
             }
 
             // If on the ground and jump is pressed...

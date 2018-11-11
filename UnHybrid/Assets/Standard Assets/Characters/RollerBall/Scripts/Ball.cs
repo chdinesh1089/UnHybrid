@@ -12,16 +12,25 @@ namespace UnityStandardAssets.Vehicles.Ball
 
         private const float k_GroundRayLength = 1f; // The length of the ray to check if the ball is grounded.
         private Rigidbody m_Rigidbody;
-
+        public Vector3 x;
+        public int counter =0;
 
         private void Start()
         {
             m_Rigidbody = GetComponent<Rigidbody>();
             // Set the maximum angular velocity.
             GetComponent<Rigidbody>().maxAngularVelocity = m_MaxAngularVelocity;
+           
         }
 
-
+       void Update()
+       {
+           counter++;
+           if (counter%2 ==0){
+             
+             m_Rigidbody.AddForce(x*m_MovePower);
+       }
+       }
         public void Move(Vector3 moveDirection, bool jump)
         {
             // If using torque to rotate the ball...
@@ -33,7 +42,7 @@ namespace UnityStandardAssets.Vehicles.Ball
             else
             {
                 // Otherwise add force in the move direction.
-                m_Rigidbody.AddForce(moveDirection*m_MovePower);
+                m_Rigidbody.AddForce(moveDirection*2);
             }
 
             // If on the ground and jump is pressed...

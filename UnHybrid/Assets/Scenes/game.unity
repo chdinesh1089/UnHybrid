@@ -145,12 +145,12 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
-    m_Resolution: -1
+    m_Resolution: 1
     m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
+    m_Strength: 0.787
+    m_Bias: 0.039
+    m_NormalBias: 0
+    m_NearPlane: 0.1
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
@@ -574,6 +574,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b307f5a18989f421483f7b07812dc718, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hit: 0
+  damage: 0.35
 --- !u!135 &1867765618
 SphereCollider:
   m_ObjectHideFlags: 0

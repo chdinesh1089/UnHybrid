@@ -11,8 +11,8 @@ public class unhybriding : MonoBehaviour {
      if(other.tag == "c")
      {
 		 hit = true;
-		 damage = damage + .05f;
-		 transform.localScale = new Vector3( damage, .35f, .35f);
+		 damage = damage + .025f;
+		 transform.localScale = new Vector3( damage, damage, .35f);
      }
  }
 

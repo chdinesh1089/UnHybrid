@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class destroy : MonoBehaviour {
   
-    public float lifetime = 50f;
+    public float lifetime = 25f;
 
 	// Use this for initialization
 	void Update () {

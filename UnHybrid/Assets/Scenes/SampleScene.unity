@@ -156,7 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wires: {fileID: 1717719077992790, guid: afd4e5b191b004e8594932a6a1a87d20, type: 2}
   spawnvalues: {x: 0, y: 0, z: 1.28}
-  time: 1
+  time: 0.5
   stop: 0
 --- !u!114 &1179189557
 MonoBehaviour:
@@ -410,7 +410,7 @@ Prefab:
     - target: {fileID: 114328922085449862, guid: 55e4ceaf635c045cfaa7e71306f8211b,
         type: 2}
       propertyPath: m_MovePower
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114328922085449862, guid: 55e4ceaf635c045cfaa7e71306f8211b,
         type: 2}

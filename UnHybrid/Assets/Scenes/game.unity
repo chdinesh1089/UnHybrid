@@ -308,6 +308,21 @@ Prefab:
       propertyPath: cam.x
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 20441125963294346, guid: 6232e5f15615147539989c8a7ba6df8f,
+        type: 2}
+      propertyPath: m_AllowDynamicResolution
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20441125963294346, guid: 6232e5f15615147539989c8a7ba6df8f,
+        type: 2}
+      propertyPath: m_RenderingPath
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 20441125963294346, guid: 6232e5f15615147539989c8a7ba6df8f,
+        type: 2}
+      propertyPath: m_AllowMSAA
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114853275947983968, guid: 6232e5f15615147539989c8a7ba6df8f, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6232e5f15615147539989c8a7ba6df8f, type: 2}
@@ -534,6 +549,12 @@ Prefab:
       propertyPath: m_JumpPower
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 135227270127593132, guid: 55e4ceaf635c045cfaa7e71306f8211b,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: e52fb17f9b1e7fd48b8955f1391d3688,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 55e4ceaf635c045cfaa7e71306f8211b, type: 2}
   m_IsPrefabParent: 0
@@ -542,6 +563,29 @@ GameObject:
   m_PrefabParentObject: {fileID: 1632474108706540, guid: 55e4ceaf635c045cfaa7e71306f8211b,
     type: 2}
   m_PrefabInternal: {fileID: 1867765615}
+--- !u!114 &1867765617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1867765616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b307f5a18989f421483f7b07812dc718, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &1867765618
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1867765616}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.52
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &2105211723 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4769336678020430, guid: 6232e5f15615147539989c8a7ba6df8f,

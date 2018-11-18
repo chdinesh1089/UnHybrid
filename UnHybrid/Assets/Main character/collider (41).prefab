@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33309534481505486}
   - component: {fileID: 23599509401568432}
   - component: {fileID: 136588042596513950}
+  - component: {fileID: 114171929664733242}
   m_Layer: 0
   m_Name: collider (41)
   m_TagString: Untagged
@@ -84,6 +85,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1717719077992790}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114171929664733242
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1717719077992790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cbe87215129437fa1e624e045b34cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetime: 50
 --- !u!136 &136588042596513950
 CapsuleCollider:
   m_ObjectHideFlags: 1

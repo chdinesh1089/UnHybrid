@@ -6,7 +6,7 @@ public class spawner : MonoBehaviour {
 
 public GameObject wires;
 public Vector3 spawnvalues;
-private float time =.3f;
+private float time =.4f;
 
 
 public bool stop = false;

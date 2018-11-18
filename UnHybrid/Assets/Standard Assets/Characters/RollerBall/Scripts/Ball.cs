@@ -25,10 +25,8 @@ namespace UnityStandardAssets.Vehicles.Ball
 
        void Update()
        {
-       counter++;
-       if (counter%50 == 0){
-           float j = .2f;
-           m_MovePower = m_MovePower+j;
+       if (Time.deltaTime %15 == 0){
+m_MovePower += 1f;
        }
              m_Rigidbody.AddForce(x*m_MovePower);
 
@@ -36,7 +34,7 @@ namespace UnityStandardAssets.Vehicles.Ball
         public void Move(Vector3 moveDirection, bool jump)
         {
             // If using torque to rotate the ball...
-            if (m_UseTorque)
+            if (false)
             {
                 // ... add torque around the axis defined by the move direction.
                 m_Rigidbody.AddTorque(new Vector3(moveDirection.z, 0, -moveDirection.x)*m_MovePower);

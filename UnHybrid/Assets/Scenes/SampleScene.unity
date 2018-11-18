@@ -136,12 +136,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1179189554}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.69, y: 2.6348214, z: 0}
-  m_LocalScale: {x: 0, y: 0.5263663, z: 1}
+  m_LocalRotation: {x: -0.09914147, y: -0.7001221, z: 0.09914147, w: 0.7001221}
+  m_LocalPosition: {x: 0, y: 11.81, z: 0}
+  m_LocalScale: {x: 0, y: 0.41378152, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 2105211723}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1179189556
 MonoBehaviour:
@@ -155,8 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wires: {fileID: 1717719077992790, guid: afd4e5b191b004e8594932a6a1a87d20, type: 2}
-  spawnvalues: {x: 0, y: 0, z: 1.28}
-  time: 0.5
+  spawnvalues: {x: 0, y: 0, z: 1}
   stop: 0
 --- !u!114 &1179189557
 MonoBehaviour:
@@ -178,7 +177,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4769336678020430, guid: 6232e5f15615147539989c8a7ba6df8f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -2.6
+      value: -2.28
       objectReference: {fileID: 0}
     - target: {fileID: 4769336678020430, guid: 6232e5f15615147539989c8a7ba6df8f, type: 2}
       propertyPath: m_LocalPosition.y
@@ -327,8 +326,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1743443448}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 352.23724, y: 0.1, z: 2.709683}
+  m_LocalPosition: {x: 480, y: 0, z: 0}
+  m_LocalScale: {x: 1000, y: 0.1, z: 2.709683}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -410,11 +409,21 @@ Prefab:
     - target: {fileID: 114328922085449862, guid: 55e4ceaf635c045cfaa7e71306f8211b,
         type: 2}
       propertyPath: m_MovePower
-      value: 6
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114328922085449862, guid: 55e4ceaf635c045cfaa7e71306f8211b,
         type: 2}
       propertyPath: m_UseTorque
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114328922085449862, guid: 55e4ceaf635c045cfaa7e71306f8211b,
+        type: 2}
+      propertyPath: m_MaxAngularVelocity
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114328922085449862, guid: 55e4ceaf635c045cfaa7e71306f8211b,
+        type: 2}
+      propertyPath: m_JumpPower
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -425,3 +434,8 @@ GameObject:
   m_PrefabParentObject: {fileID: 1632474108706540, guid: 55e4ceaf635c045cfaa7e71306f8211b,
     type: 2}
   m_PrefabInternal: {fileID: 1867765615}
+--- !u!4 &2105211723 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4769336678020430, guid: 6232e5f15615147539989c8a7ba6df8f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1421457858}

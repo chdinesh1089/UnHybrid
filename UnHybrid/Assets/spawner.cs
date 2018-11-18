@@ -6,7 +6,7 @@ public class spawner : MonoBehaviour {
 
 public GameObject wires;
 public Vector3 spawnvalues;
-public float time =.5f;
+private float time =.4f;
 
 
 public bool stop = false;
@@ -18,7 +18,10 @@ public bool stop = false;
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (Time.deltaTime %10 ==0){
+			time = time - .01f;
+
+		}
 	}
 
 	IEnumerator spawn () {
@@ -26,7 +29,7 @@ public bool stop = false;
 	   while (!stop)
 	   {
 		   
-		   Vector3 position = new Vector3 (Random.Range(0f,transform.position.x),1,Random.Range(-spawnvalues.z,spawnvalues.z));
+		   Vector3 position = new Vector3 (Random.Range(6f,11f),1,Random.Range(-spawnvalues.z,spawnvalues.z));
 		   Instantiate(wires, position+transform.TransformPoint (0,0,0),wires.transform.rotation);
 		    yield return new WaitForSeconds(time);
 	   }

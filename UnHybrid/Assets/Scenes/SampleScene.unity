@@ -409,7 +409,7 @@ Prefab:
     - target: {fileID: 114328922085449862, guid: 55e4ceaf635c045cfaa7e71306f8211b,
         type: 2}
       propertyPath: m_MovePower
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 114328922085449862, guid: 55e4ceaf635c045cfaa7e71306f8211b,
         type: 2}

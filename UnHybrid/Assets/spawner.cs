@@ -29,7 +29,7 @@ public bool stop = false;
 	   while (!stop)
 	   {
 		   
-		   Vector3 position = new Vector3 (Random.Range(7f,11f),1,Random.Range(-spawnvalues.z,spawnvalues.z));
+		   Vector3 position = new Vector3 (Random.Range(5f,11f),1,Random.Range(-spawnvalues.z,spawnvalues.z));
 		   Instantiate(wires, position+transform.TransformPoint (0,0,0),wires.transform.rotation);
 		    yield return new WaitForSeconds(time);
 	   }

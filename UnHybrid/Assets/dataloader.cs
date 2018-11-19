@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class dataloader : MonoBehaviour {
 
+public string[] users;
 	// Use this for initialization
 	IEnumerator  Start () {
 
@@ -11,6 +12,8 @@ public class dataloader : MonoBehaviour {
 	yield return data;
 	string text = data.text;
 	print(text);
+	users = text.Split(';');
+ 
 
 	}
 	

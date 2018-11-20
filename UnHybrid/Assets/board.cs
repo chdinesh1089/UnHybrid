@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class board : MonoBehaviour {
 public string[] users;
 public Text list;
+public GameObject mainmenu;
 public GameObject hb;
 public string url = "http://localhost/game/dataa.php";
 	// Use this for initialization
@@ -29,5 +30,16 @@ public string url = "http://localhost/game/dataa.php";
 	
 public void scoreopener () {
 	hb.SetActive(true);
+	mainmenu.SetActive(false);
+
+}
+public void hsbback () {
+	mainmenu.SetActive(true);
+	hb.SetActive(false);
+
+}
+
+public void exitgame () {
+	Application.Quit();
 }
 }

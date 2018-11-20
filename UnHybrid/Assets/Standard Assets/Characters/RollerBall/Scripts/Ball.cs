@@ -42,7 +42,7 @@ m_MovePower += 1f;
             else
             {
                 // Otherwise add force in the move direction.
-                m_Rigidbody.AddForce(moveDirection*(m_MovePower-1));
+                m_Rigidbody.AddForce(moveDirection*(3f));
             }
 
             // If on the ground and jump is pressed...

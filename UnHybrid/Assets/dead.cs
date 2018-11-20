@@ -5,8 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class dead : MonoBehaviour {
 
-	
-	public GameObject player;
+	public GameObject pausebutton;	public GameObject player;
 	public GameObject spwn;
 	public GameObject dist;
 	public GameObject panel;
@@ -18,6 +17,7 @@ public class dead : MonoBehaviour {
 
 		Destroy(player);
 		Destroy(spwn);
+		Destroy(pausebutton);
 		panel.SetActive(true);
 		if (PlayerPrefs.GetInt("score") >= PlayerPrefs.GetInt("HighScore")){
 			congrats.SetActive(true);

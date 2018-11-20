@@ -32,9 +32,12 @@ public class firsttime : MonoBehaviour {
 		 WWWForm data = new WWWForm();
 		 data.AddField("playernamePost",user);
 		 data.AddField("scorePost",0);
-		 PlayerPrefs.GetString("username",user);
+	
+		 PlayerPrefs.SetString("username",user);
 
+         if (user != ""){
 		 WWW www = new WWW (url,data);
+		 }
 
 	}
 }

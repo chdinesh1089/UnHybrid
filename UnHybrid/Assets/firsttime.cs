@@ -32,6 +32,7 @@ public class firsttime : MonoBehaviour {
 		 WWWForm data = new WWWForm();
 		 data.AddField("playernamePost",user);
 		 data.AddField("scorePost",0);
+		 PlayerPrefs.SetInt("HighScore",0);
 	
 		 PlayerPrefs.SetString("username",user);
 

@@ -9,6 +9,7 @@ public class distance : MonoBehaviour {
 public Transform player;
 public Text dist;
 public Text high_score;
+public string updateurl = "http://localhost/game/update.php";
 public int highscore;
 	// Use this for initialization
 	void Start () {
@@ -26,6 +27,14 @@ public int highscore;
           highscore =score;
 		  PlayerPrefs.SetInt("HighScore",highscore);
 		  high_score.text = PlayerPrefs.GetInt("HighScore").ToString("0");
+		  WWWForm form = new WWWForm();
+		  form.AddField("playernamePost",PlayerPrefs.GetString("username"));
+		form.AddField("scorePost",PlayerPrefs.GetString("HighScore"));
+
+		WWW www = new WWW(updateurl,form);
+
+
+
 		}
 		
 		

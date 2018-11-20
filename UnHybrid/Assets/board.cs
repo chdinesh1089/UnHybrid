@@ -7,7 +7,7 @@ public string[] users;
 public Text list;
 public GameObject mainmenu;
 public GameObject hb;
-public string url = "http://localhost/game/dataa.php";
+public string url = "http://unanalyzed-chiefs.000webhostapp.com/dataa.php";
 	// Use this for initialization
 	IEnumerator Start () {
         

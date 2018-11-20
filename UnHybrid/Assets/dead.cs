@@ -9,7 +9,7 @@ public class dead : MonoBehaviour {
 	public GameObject spwn;
 	public GameObject dist;
 	public GameObject panel;
-	public string updateurl = "http://localhost/game/update.php";
+	public string updateurl = "http://unanalyzed-chiefs.000webhostapp.com/update.php";
 
 	public GameObject congrats;
 	void OnTriggerEnter () {

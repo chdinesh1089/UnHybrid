@@ -1581,6 +1581,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114065904485858392, guid: bc370d70bf77e458e879bb197b6b94f5,
+        type: 2}
+      propertyPath: m_MovePower
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114065904485858392, guid: bc370d70bf77e458e879bb197b6b94f5,
+        type: 2}
+      propertyPath: m_UseTorque
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114065904485858392, guid: bc370d70bf77e458e879bb197b6b94f5,
+        type: 2}
+      propertyPath: m_MaxAngularVelocity
+      value: 25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc370d70bf77e458e879bb197b6b94f5, type: 2}
   m_IsPrefabParent: 0

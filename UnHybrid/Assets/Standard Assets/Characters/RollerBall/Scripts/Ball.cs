@@ -34,15 +34,15 @@ m_MovePower += 1f;
         public void Move(Vector3 moveDirection, bool jump)
         {
             // If using torque to rotate the ball...
-            if (false)
+            if (m_UseTorque)
             {
                 // ... add torque around the axis defined by the move direction.
-                m_Rigidbody.AddTorque(new Vector3(moveDirection.z, 0, -moveDirection.x)*m_MovePower);
+                m_Rigidbody.AddTorque(new Vector3(moveDirection.z, 0, -moveDirection.x)*.5f);
             }
             else
             {
                 // Otherwise add force in the move direction.
-                m_Rigidbody.AddForce(moveDirection*(3f));
+                m_Rigidbody.AddForce(moveDirection*(2f));
             }
 
             // If on the ground and jump is pressed...

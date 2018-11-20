@@ -9,8 +9,11 @@ public class dead : MonoBehaviour {
 	public GameObject spwn;
 	public GameObject dist;
 	public GameObject panel;
+	public string updateurl = "http://localhost/game/update.php";
+
 	public GameObject congrats;
 	void OnTriggerEnter () {
+		 
 
 	   Destroy (dist);
 
@@ -21,6 +24,11 @@ public class dead : MonoBehaviour {
 		panel.SetActive(true);
 		if (PlayerPrefs.GetInt("score") >= PlayerPrefs.GetInt("HighScore")){
 			congrats.SetActive(true);
+			 WWWForm form = new WWWForm();
+		  form.AddField("playernamePos",PlayerPrefs.GetString("username"));
+		form.AddField("scorePos",PlayerPrefs.GetInt("HighScore"));
+
+		WWW www = new WWW(updateurl,form);
 
 		}
 
@@ -28,7 +36,9 @@ public class dead : MonoBehaviour {
 
 
 	}
-
+public void Update () {
+		 Debug.Log(PlayerPrefs.GetInt("HighScore"));
+ }
 	public void Replay () {
 		SceneManager.LoadScene(1);
 	}

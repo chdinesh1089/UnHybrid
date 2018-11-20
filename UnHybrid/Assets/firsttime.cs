@@ -7,6 +7,7 @@ public class firsttime : MonoBehaviour {
 	// Use this for initialization
 	public GameObject registerer;
 	public InputField name;
+	public GameObject registerpanel;
 	public string user;
 	public string url = "http://localhost/game/dataa.php";
 	void Start () {
@@ -25,6 +26,9 @@ public class firsttime : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+	}
+	public void registerdead () {
+		registerpanel.SetActive(false);
 	}
 
 	public void getName() {

@@ -9,12 +9,13 @@ public class firsttime : MonoBehaviour {
 	public InputField name;
 	public GameObject registerpanel;
 	public string user;
-	public string url = "http://localhost/game/dataa.php";
+	public string url = "http://unanalyzed-chiefs.000webhostapp.com/dataa.php";
 	void Start () {
-		PlayerPrefs.SetInt("register",0);
+		
 		if (PlayerPrefs.GetInt("register") == 0){
 			registerer.SetActive(true);
 			//PlayerPrefs.SetInt("register",1);
+			PlayerPrefs.SetInt("register",1);
 
 		}
 		else 

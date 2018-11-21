@@ -1066,7 +1066,7 @@ MonoBehaviour:
   name: {fileID: 1127591086}
   registerpanel: {fileID: 820135708}
   user: 
-  url: http://localhost/game/dataa.php
+  url: https://unanalyzed-chiefs.000webhostapp.com/dataa.php
 --- !u!114 &672028387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1082,7 +1082,7 @@ MonoBehaviour:
   list: {fileID: 1181784454}
   mainmenu: {fileID: 329406773}
   hb: {fileID: 1474339531}
-  url: http://localhost/game/dataa.php
+  url: https://unanalyzed-chiefs.000webhostapp.com/dataa.php
 --- !u!1 &820135708
 GameObject:
   m_ObjectHideFlags: 0
@@ -1099,7 +1099,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &820135709
 RectTransform:
   m_ObjectHideFlags: 0

@@ -18,10 +18,12 @@ public string url = "http://unanalyzed-chiefs.000webhostapp.com/dataa.php";
 		yield return retrieve;
 		string fulldata = retrieve.text;
 		users = fulldata.Split(';');
+		int n =0;
 		for (int i = users.Length-1; i>=0; i--){
+			n++;
 			if (users[i] != "->0" && !(users[i].StartsWith("<"))){
 				items = users[i].Split(':');
-			list.text = list.text+ "\n"+ items[0];
+			list.text = list.text+ "\n"+n+".  "+ items[0];
 			list2.text = list2.text + "\n" + items[1];
 			}
 

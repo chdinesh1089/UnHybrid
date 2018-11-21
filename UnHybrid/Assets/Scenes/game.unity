@@ -2390,6 +2390,11 @@ Prefab:
       propertyPath: m_MaxAngularVelocity
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 23062853616393858, guid: bc370d70bf77e458e879bb197b6b94f5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9cb04c75a2d4a44b1a7f071382a88ac5, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc370d70bf77e458e879bb197b6b94f5, type: 2}
   m_IsPrefabParent: 0

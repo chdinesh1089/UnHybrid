@@ -9,31 +9,40 @@ public class firsttime : MonoBehaviour {
 	public InputField name;
 	public GameObject registerpanel;
 	public string user;
+	public int indicator;
 	public string url = "http://unanalyzed-chiefs.000webhostapp.com/dataa.php";
 	void Start () {
-		PlayerPrefs.SetInt("register",0);
-		if (PlayerPrefs.GetInt("register") == 0){
+
+	
+		if (PlayerPrefs.GetInt("register") == 1){
 			registerer.SetActive(true);
 			//PlayerPrefs.SetInt("register",1);
-			PlayerPrefs.SetInt("register",1);
+			
 
 		}
-		else 
-		registerer.SetActive(false);
+		
 	}
+
+
 
 
 	
 	// Update is called once per frame
 	void Update () {
-		
+		indicator = PlayerPrefs.GetInt("register");
 	}
 	public void registerdead () {
+		if(user != ""){
+			PlayerPrefs.SetInt("register",0);
+
+		
 		registerpanel.SetActive(false);
+	}
 	}
 
 	public void getName() {
 		 user = name.text;
+
 		 WWWForm data = new WWWForm();
 		 data.AddField("playernamePost",user);
 		 data.AddField("scorePost",0);

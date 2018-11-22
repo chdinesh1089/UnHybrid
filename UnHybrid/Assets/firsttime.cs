@@ -13,7 +13,7 @@ public class firsttime : MonoBehaviour {
 	public string url = "http://unanalyzed-chiefs.000webhostapp.com/dataa.php";
 	void Start () {
 
-	
+	   
 		if (PlayerPrefs.GetInt("register") == 1){
 			registerer.SetActive(true);
 			//PlayerPrefs.SetInt("register",1);
@@ -41,8 +41,9 @@ public class firsttime : MonoBehaviour {
 	}
 
 	public void getName() {
+		PlayerPrefs.SetInt("register",0);
 		 user = name.text;
-
+registerpanel.SetActive(false);
 		 WWWForm data = new WWWForm();
 		 data.AddField("playernamePost",user);
 		 data.AddField("scorePost",0);

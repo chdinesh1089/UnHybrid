@@ -37,7 +37,7 @@ m_MovePower += 1f;
             if (m_UseTorque)
             {
                 // ... add torque around the axis defined by the move direction.
-                m_Rigidbody.AddTorque(new Vector3(moveDirection.z, 0, -moveDirection.x)*.5f);
+                m_Rigidbody.AddTorque(new Vector3(moveDirection.z, 0, -moveDirection.x)*.35f);
             }
             else
             {

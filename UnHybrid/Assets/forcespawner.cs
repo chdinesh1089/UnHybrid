@@ -4,13 +4,35 @@ using UnityEngine;
 
 public class forcespawner : MonoBehaviour {
 
+	
+public GameObject wires;
+public Vector3 spawnvalues;
+private float time =7f;
+
+
+public bool stop = false;
+
 	// Use this for initialization
 	void Start () {
-		
+		StartCoroutine(spawn());
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		//transform.position = new Vector3(transform.position.x+.1f,transform.position.y,transform.position.z);
+		if (Time.deltaTime %10 ==0){
+			time = time - .01f;
+
+		}
+	}
+
+	IEnumerator spawn () {
+	  
+	   while (!stop)
+	   {
+		   
+		   Vector3 position = new Vector3 (Random.Range(10f,11f),1,Random.Range(-spawnvalues.z,spawnvalues.z));
+		   Instantiate(wires, position+transform.TransformPoint (0,0,0),wires.transform.rotation);
+		    yield return new WaitForSeconds(time);
+	   }
 	}
 }

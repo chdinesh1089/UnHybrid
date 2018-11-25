@@ -13,13 +13,16 @@ public class firsttime : MonoBehaviour {
 	public string url = "http://unanalyzed-chiefs.000webhostapp.com/dataa.php";
 	void Start () {
 
-	   
-		if (PlayerPrefs.GetInt("register") == 1){
-			registerer.SetActive(true);
-			//PlayerPrefs.SetInt("register",1);
-			
 
-		}
+      string playerName = PlayerPrefs.GetString("username");
+	  if (playerName == "") 
+	  {
+		  registerer.SetActive(true);
+
+	  }
+	  else 
+	  registerer.SetActive(false);
+	   
 		
 	}
 
@@ -28,20 +31,18 @@ public class firsttime : MonoBehaviour {
 
 	
 	// Update is called once per frame
-	void Update () {
-		indicator = PlayerPrefs.GetInt("register");
-	}
+	
 	public void registerdead () {
-		if(user != ""){
-			PlayerPrefs.SetInt("register",0);
-
+		if(name.text != ""){
 		
 		registerpanel.SetActive(false);
 	}
+	else 
+		registerpanel.SetActive(true);
 	}
 
 	public void getName() {
-		PlayerPrefs.SetInt("register",0);
+		
 		 user = name.text;
 registerpanel.SetActive(false);
 		 WWWForm data = new WWWForm();

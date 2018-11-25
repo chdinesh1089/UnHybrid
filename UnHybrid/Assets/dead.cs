@@ -14,6 +14,9 @@ public class dead : MonoBehaviour {
 	public GameObject congrats;
 	public GameObject[] controllers;
 	void OnTriggerEnter () {
+		int value = PlayerPrefs.GetInt("HighScore");
+		int points = (int) (PlayerPrefs.GetInt("count"))/2;
+		PlayerPrefs.SetInt("HighScore",(value+points));
 		 
 Destroy(controllers[0]);
 			Destroy(controllers[1]);

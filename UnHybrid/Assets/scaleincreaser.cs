@@ -12,7 +12,7 @@ public Vector3 cube;
 	}
 		void Update () {
 transform.localScale = cube;
-		cube.x = cube.x + Time.deltaTime*10f;
+		cube.x = cube.x + Time.deltaTime*300f;
 		
 			
     

@@ -12,9 +12,14 @@ public class dead : MonoBehaviour {
 	public string updateurl = "http://unanalyzed-chiefs.000webhostapp.com/update.php";
 
 	public GameObject congrats;
+	public GameObject[] controllers;
 	void OnTriggerEnter () {
+		int value = PlayerPrefs.GetInt("HighScore");
+		int points = (int) (PlayerPrefs.GetInt("count"))/2;
+		PlayerPrefs.SetInt("HighScore",(value+points));
 		 
-
+Destroy(controllers[0]);
+			Destroy(controllers[1]);
 	   Destroy (dist);
 
 
@@ -37,11 +42,15 @@ public class dead : MonoBehaviour {
 
 
 	}
+	
+
+
 
 	public void stop () {
 		 Destroy (dist);
 
-
+Destroy(controllers[0]);
+			Destroy(controllers[1]);
 		
 		Destroy(spwn);
 		

@@ -6,7 +6,7 @@ public class spawner : MonoBehaviour {
 
 public GameObject wires;
 public Vector3 spawnvalues;
-private float time =.4f;
+private float time =.35f;
 
 
 public bool stop = false;
@@ -29,7 +29,7 @@ public bool stop = false;
 	   while (!stop)
 	   {
 		   
-		   Vector3 position = new Vector3 (Random.Range(5f,11f),1,Random.Range(-spawnvalues.z,spawnvalues.z));
+		   Vector3 position = new Vector3 (Random.Range(10f,20f),1,Random.Range(-spawnvalues.z,spawnvalues.z));
 		   Instantiate(wires, position+transform.TransformPoint (0,0,0),wires.transform.rotation);
 		    yield return new WaitForSeconds(time);
 	   }

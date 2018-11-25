@@ -25,7 +25,7 @@ namespace UnityStandardAssets.Vehicles.Ball
 
        void Update()
        {
-       if (Time.deltaTime %15 == 0){
+       if (Time.deltaTime %20f == 0){
 m_MovePower += 1f;
        }
              m_Rigidbody.AddForce(x*m_MovePower);
@@ -37,12 +37,12 @@ m_MovePower += 1f;
             if (m_UseTorque)
             {
                 // ... add torque around the axis defined by the move direction.
-                m_Rigidbody.AddTorque(new Vector3(moveDirection.z, 0, -moveDirection.x)*.5f);
+                m_Rigidbody.AddTorque(new Vector3(moveDirection.z, 0, -moveDirection.x)*.55f);
             }
             else
             {
                 // Otherwise add force in the move direction.
-                m_Rigidbody.AddForce(moveDirection*(2f));
+                m_Rigidbody.AddForce(moveDirection*(3f));
             }
 
             // If on the ground and jump is pressed...

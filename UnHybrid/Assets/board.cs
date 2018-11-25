@@ -12,6 +12,7 @@ public GameObject reds;
 public GameObject hb;
 public string url = "http://unanalyzed-chiefs.000webhostapp.com/dataa.php";
 	// Use this for initialization
+
 	IEnumerator Start () {
         
 		WWW retrieve = new WWW(url);
@@ -19,6 +20,7 @@ public string url = "http://unanalyzed-chiefs.000webhostapp.com/dataa.php";
 		string fulldata = retrieve.text;
 		users = fulldata.Split(';');
 		int n =0;
+		list.text = "";
 		for (int i = users.Length-1; i>=0; i--){
 			n++;
 			if (users[i] != "->0" && !(users[i].StartsWith("<"))){

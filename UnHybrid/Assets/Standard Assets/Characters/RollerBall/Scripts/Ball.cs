@@ -17,22 +17,22 @@ namespace UnityStandardAssets.Vehicles.Ball
 
         private void Start()
         {
+            
             m_Rigidbody = GetComponent<Rigidbody>();
             // Set the maximum angular velocity.
             GetComponent<Rigidbody>().maxAngularVelocity = m_MaxAngularVelocity;
            
         }
 
-       void Update()
-       {
-       if (Time.deltaTime %20f == 0){
-m_MovePower += 1f;
-       }
-             m_Rigidbody.AddForce(x*m_MovePower);
-
-       }
+public int interval ;
         public void Move(Vector3 moveDirection, bool jump)
-        {
+        {  
+            interval +=1;
+            if (interval%1.5 == 0){
+  m_Rigidbody.AddForce(x*(m_MovePower));
+            }
+            // making the ball move farword at a constant speed by adding physics force
+             
             // If using torque to rotate the ball...
             if (m_UseTorque)
             {

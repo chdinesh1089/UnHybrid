@@ -26,5 +26,5 @@ if (obj.tag == "c"){
 	void OnTriggerExit(Collider obj){
 if (obj.tag == "c"){
  c--;
-}
-}}
+
+}}}

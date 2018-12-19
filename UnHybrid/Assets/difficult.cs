@@ -16,10 +16,10 @@ public class difficult : MonoBehaviour {
 	void Update () {
 		
 		time++;
-		if (time > 900f) {
+		if (time > 3000f) {
         spawner.SetActive(true);
 
 
 		}
-	}
+	}  
 }

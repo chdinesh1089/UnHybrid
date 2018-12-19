@@ -3362,6 +3362,11 @@ Prefab:
       propertyPath: x.x
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 54526715451988592, guid: bc370d70bf77e458e879bb197b6b94f5,
+        type: 2}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc370d70bf77e458e879bb197b6b94f5, type: 2}
   m_IsPrefabParent: 0
@@ -3897,6 +3902,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawner: {fileID: 2076748293}
+  time: 0
 --- !u!1 &2076748293
 GameObject:
   m_ObjectHideFlags: 0

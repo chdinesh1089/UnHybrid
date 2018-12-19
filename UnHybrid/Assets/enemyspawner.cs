@@ -8,7 +8,7 @@ public class enemyspawner : MonoBehaviour {
 
 public GameObject wires;
 public Vector3 spawnvalues;
-private float time =5f;
+private float time =10f;
 
 	// Use this for initialization
 
@@ -20,7 +20,7 @@ private float time =5f;
 	// Update is called once per frame
 	void Update () {
 			if (Time.deltaTime %10 ==0){
-			time = time - .01f;
+			time = time - .02f;
 
 		}
 		
